@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<style>
+  * {
+    margin: 0;
+  }
+
+  #navbar {
+    margin-bottom: 20px;
+    padding: 30px;
+    background-color: brown;
+  }
+
+  #show_products,
+  #add_product {
+    background-color: white;
+    padding: 15px;
+    border: 0;
+    border-radius: 10px;
+    font-size: larger;
+    cursor: pointer;
+  }
+
+  #show_products:active,
+  #add_product:active {
+    transform: scale(0.98);
+  }
+
+  #products {
+    width: 20%;
+    display: grid;
+    margin: auto;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  #products * {
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+
+  #add_product {
+    background-color: green;
+    color: white;
+    margin: 0 60px;
+  }
+</style>
+
+<body>
+  <div id="navbar">
+    <!--Create Show Products button here, give id as "show_products". avoid making spelling mistakes in HTML id's-->
+    <!--Show Products button to navigate inventory page where products are displayed-->
+    <a href="inventory.html"><button id="show_products">Show Products</button></a>
+  </div>
+  <div>
+    <h2>Add Products</h2>
+    <!--Create a form here to accept product data from user, give form HTML id as "products"-->
+    <form id="products">
+      <!--Create four inputs to accept Type, Description, price, & image-->
+      <!--give the inputs following respective id's, "type", "desc", "price","image"-->
+      <!--form containing input fields to accept data like type, description, image url, price of product-->
+      <input type="text" id="type" placeholder="Type" />
+      <input type="text" id="desc" placeholder="Description" />
+      <input type="text" id="price" placeholder="Price" />
+      <input type="url" id="image" placeholder="Image URL" />
+      <!--create a "Add Product" button to submit form, give it html id as "add_product"-->
+      <!--Add Product button to add the product data in local storage-->
+      <button id="add_product" onclick="addProducts()">Add Product</button>
+    </form>
+  </div>
+</body>
+
+</html>
+
+<script src="./scripts/index.js"></script>
